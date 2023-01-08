@@ -1,0 +1,20 @@
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expenses-list {
+  width: 20%;
+}
+
+.show-balance {
+  font-size: 140%;
+  font-weight: 300;
+}
+
+.balance-amount {
+  font-size: 180%;
+  font-weight: 600;
+}
