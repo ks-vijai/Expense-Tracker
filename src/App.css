@@ -44,11 +44,35 @@
 }
 
 .income {
-  color: green;
+  color: #86c6a9;
   font-size: 130%;
 }
 
 .expenses {
   color: red;
   font-size: 130%;
+}
+
+.expenses-history {
+  margin-top: 20px;
+}
+
+.history-heading {
+  font-size: 130%;
+  font-weight: 400;
+}
+
+.history-seperator {
+  background-color: grey;
+  height: 2px;
+  margin: 8px 0 20px 0;
+}
+
+.transaction-list {
+  box-shadow: 0 0 2px 0.2px black;
+  border-right: 5px solid #86c6a9;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 5px;
 }
