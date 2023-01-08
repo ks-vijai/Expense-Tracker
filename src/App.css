@@ -18,3 +18,37 @@
   font-size: 180%;
   font-weight: 600;
 }
+
+.income-expenses {
+  align-items: center;
+  box-shadow: 0 0 2px 0 black;
+  border: 0.5px solid grey;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.expenses-heading {
+  font-size: 120%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.expenses-seperator {
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 10px;
+  height: 50px;
+  width: 0.5px;
+}
+
+.income {
+  color: green;
+  font-size: 130%;
+}
+
+.expenses {
+  color: red;
+  font-size: 130%;
+}
