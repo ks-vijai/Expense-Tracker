@@ -76,11 +76,18 @@
 .transaction-list {
   background-color: white;
   box-shadow: 0 0 2px 0.2px black;
-  border-right: 5px solid #86c6a9;
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
   padding: 5px;
+}
+
+.negative-amount {
+  border-right: 5px solid red;
+}
+
+.positive-amount {
+  border-right: 5px solid #86c6a9;
 }
 
 .form-labels {
