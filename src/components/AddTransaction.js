@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AddTransaction() {
   const [transactionCause, setTransactionCause] = useState("");
@@ -10,17 +12,25 @@ function AddTransaction() {
   const addNewTransaction = (e) => {
     e.preventDefault();
 
-    const newTransaction = {
-      id: Math.floor(Math.random() * 100000000),
-      text: transactionCause,
-      amount: parseInt(transactionAmount),
-    };
+    if (!transactionCause && !transactionAmount) {
+      toast.error("Enter Transaction Text and Amount");
+    } else if (!transactionCause) {
+      toast.error("Enter Transaction Text");
+    } else if (!transactionAmount) {
+      toast.error("Enter Text and Transaction Amount");
+    } else {
+      const newTransaction = {
+        id: Math.floor(Math.random() * 100000000),
+        text: transactionCause,
+        amount: parseInt(transactionAmount),
+      };
 
-    addTransaction(newTransaction);
+      addTransaction(newTransaction);
+    }
   };
 
   return (
-    <div>
+    <>
       <div className="new-transaction">Add new Transaction</div>
       <div className="history-seperator"></div>
       <form onSubmit={(e) => addNewTransaction(e)}>
@@ -52,7 +62,19 @@ function AddTransaction() {
         </div>
         <button className="add-button">Add Transaction</button>
       </form>
-    </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+    </>
   );
 }
 
