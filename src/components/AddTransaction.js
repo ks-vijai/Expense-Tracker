@@ -12,18 +12,17 @@ function AddTransaction() {
   const addNewTransaction = (e) => {
     e.preventDefault();
 
-    if (!transactionCause && !transactionAmount) {
-      toast.error("Enter Transaction Text and Amount");
-    } else if (!transactionCause) {
+    if (!transactionCause) {
       toast.error("Enter Transaction Text");
     } else if (!transactionAmount) {
-      toast.error("Enter Text and Transaction Amount");
+      toast.error("Enter Transaction Amount");
     } else {
       const newTransaction = {
         id: Math.floor(Math.random() * 100000000),
         text: transactionCause,
         amount: parseInt(transactionAmount),
       };
+      toast.success("Successfully Added");
 
       addTransaction(newTransaction);
     }
@@ -41,7 +40,7 @@ function AddTransaction() {
           <br />
           <input
             type="text"
-            value={transactionCause}
+            value={transactionCause || ""}
             onChange={(e) => setTransactionCause(e.target.value)}
             placeholder="Enter text...."
             className="form-inputs"
@@ -54,7 +53,7 @@ function AddTransaction() {
           </label>
           <input
             type="number"
-            value={transactionAmount}
+            value={transactionAmount || ""}
             onChange={(e) => setTransactionAmount(e.target.value)}
             placeholder="Enter Amount...."
             className="form-inputs"
