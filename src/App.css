@@ -80,6 +80,8 @@
   justify-content: space-between;
   margin: 10px 0;
   padding: 5px;
+  position: inherit;
+  width: 95%;
 }
 
 .negative-amount {
@@ -112,4 +114,28 @@
   height: 40px;
   padding: 5px;
   width: 100%;
+}
+
+.delete-transaction {
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  left: 40%;
+  line-height: 20px;
+  opacity: 0;
+  padding: 2px 5px;
+  position: absolute;
+  transform: translate(-100%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.total-transactions {
+  list-style-type: none;
+  padding: 0;
+}
+
+.total-transactions li:hover .delete-transaction {
+  opacity: 1;
 }
