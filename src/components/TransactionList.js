@@ -4,7 +4,7 @@ import Transaction from "../components/Transaction";
 function TransactionList() {
   return (
     <div className="expenses-history">
-      <div className="history-heading">History</div>
+      <div className="history-heading">Transactions</div>
       <div className="history-seperator"></div>
       <Transaction />
     </div>
