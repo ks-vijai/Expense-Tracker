@@ -10,6 +10,19 @@
   justify-content: center;
 }
 
+h2,
+.show-balance,
+.balance-amount,
+.expenses-heading,
+.history-heading,
+.new-transaction,
+.form-labels {
+  background: -webkit-linear-gradient(#b367ff, #333);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .expenses-list {
   width: 20%;
 }
